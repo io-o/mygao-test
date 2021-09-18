@@ -1,0 +1,6 @@
+.vscode
+node_modules
+src
+index.html
+vite.config.ts
+yarn.lock

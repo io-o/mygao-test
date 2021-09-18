@@ -1,0 +1,50 @@
+{
+  "name": "mygao-test",
+  "version": "0.0.9",
+  "description": "一套代码兼容多个版本",
+  "author": "mygao666",
+  "license": "ISC",
+  "keywords": [
+    "vue-demi",
+    "vue2",
+    "vue3"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build"
+  },
+  "main": "./dist/mygao-test.umd.js",
+  "module": "./dist/mygao-test.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mygao-test.es.js",
+      "require": "./dist/mygao-test.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "vue-demi": "^0.11.4"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.11 || >=3.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^16.9.2",
+    "@vitejs/plugin-vue": "^1.4.0",
+    "@vue/compiler-sfc": "3.2.12",
+    "cross-env": "^7.0.3",
+    "less": "^4.1.1",
+    "typescript": "^4.4.3",
+    "vite": "^2.5.8",
+    "vite-plugin-dts": "^0.5.3",
+    "vue": "3.2.12",
+    "vue-tsc": "0.3.0"
+  }
+}
