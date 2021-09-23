@@ -2,11 +2,11 @@
  * @Author: Andrew Q
  * @Date: 2021-09-18 14:43:22
  * @LastEditors: Andrew Q
- * @LastEditTime: 2021-09-18 15:27:03
+ * @LastEditTime: 2021-09-23 16:09:32
  * @Description: 
 -->
 <template>
-  <Calendar :msg="msg"></Calendar>
+  <Calendar></Calendar>
 </template>
 
 <script lang="ts">
@@ -21,7 +21,7 @@ export default defineComponent({
 
   setup: () => {
     const state = reactive({
-      msg: '为我问你们',
+      week: [1, 2, 3],
     });
     return {
       ...toRefs(state),

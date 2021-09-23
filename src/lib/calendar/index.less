@@ -1,0 +1,50 @@
+@fontFamily: Inter, Roboto, Oxygen, Fira Sans, Helvetica Neue, sans-serif;
+
+.calendar-font {
+  font-size: 13px;
+  text-align: center;
+  line-height: 13px;
+}
+
+.calendar {
+  &-box {
+    display: flex;
+  }
+
+  &-body {
+    border: 2px solid #4e6ef2;
+    border-radius: 15px;
+    padding: 15px 15px 0;
+    width: 300px;
+    box-sizing: border-box;
+    border-right: none;
+
+    header {
+      margin: 10px 0;
+      grid-template-rows: repeat(1, 1fr);
+
+      .week {
+        color: #333333;
+        font-family: @fontFamily;
+      }
+    }
+
+    .day {
+      padding: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 2px solid transparent;
+      margin: 2px;
+    }
+
+    .day:hover {
+      border: 2px solid #bdbfc8;
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+}
